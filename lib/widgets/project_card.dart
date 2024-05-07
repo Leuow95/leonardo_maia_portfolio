@@ -8,28 +8,21 @@ class ProjectCard extends StatelessWidget {
   Widget build(BuildContext context) {
     return Column(
       children: [
-        ListTile(
-          leading: Container(
-            decoration: BoxDecoration(borderRadius: BorderRadius.circular(20), color: Colors.red),
-            child: Image.asset(
-              "assets/images/sasi-icon.png",
-              fit: BoxFit.fill,
+        Material(
+          child: ListTile(
+            leading: Container(
+              decoration: BoxDecoration(borderRadius: BorderRadius.circular(20), color: Colors.brown),
+              child: Image.asset("assets/images/sasi-icon.png", fit: BoxFit.fill),
             ),
+            tileColor: Colors.grey,
+            title: const Text("Sasi Mobile Applicaton"),
+            shape: RoundedRectangleBorder(
+              borderRadius: BorderRadius.circular(20), // Arredonda as bordas do ListTile
+            ),
+            subtitle: SvgPicture.asset("assets/icons/google-play.svg"),
+            hoverColor: Colors.red,
           ),
-          title: const Text("Sasi Mobile Applicaton"),
-          subtitle: const Text("An Application builded to display another applications"),
-          trailing: Image.asset(
-            "assets/images/example-sasi.jpeg",
-            width: 50,
-            height: 50,
-          ),
-          hoverColor: Colors.red,
         ),
-        Center(
-          child: SvgPicture.asset(
-            "assets/icons/google-play.svg",
-          ),
-        )
       ],
     );
   }
